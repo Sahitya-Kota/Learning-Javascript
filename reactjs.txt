@@ -1,0 +1,102 @@
+//Reactjs: js lib for interactive userinterface
+//direct Dom manipulation is very slow
+//webapp: multiple webpages: multiple doms: multiple reloads of all pages everytime
+//single page application: 1 main webpage others are ajax req
+//ajax: async js and xml
+//only parts of page reloads when required rather than complete page
+
+//Virtual and Real DOM
+//reactjs creats a virtual dom
+//on changes virtualis comperd to real dom and only req changes are made to that specific part of DOM
+
+//Component based architecture
+//building components that are reapeated several times
+
+//React Application
+//react js was created by fb yes
+
+//React JS  ---  Nodejs         -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* 
+application: npx create-react-app <lowercase-spacelessname/ . if current working folder itself is the name of the application>
+output:Happy Hacking!!
+
+node modules libraries are req for app development
+we work with src folder with all images, and all other data
+
+root component relationship is followed: tree model
+no of components is unlimited
+in react func components are faster than class components
+only directly connected components' info is imp grandparents' info is not req
+every component has 2 files creation and styling
+
+root component: App.js others can be anything App.css will style the component
+component creation: func representing component : UpperCamelCase names
+
+every component must return a react element
+function App(){} is the root component returning react elelment which uses jsx which is similar to html
+react ele=jsx js xml
+then this component is exported by def exp
+running this:
+>npm start 
+app -> bable(jsx to js) -> compiled-app 
+    -> webpack(packages all img,css,js into sep bundles) -> react build 
+    -> hosted to the server( web server if hosted else local server)
+    -> the web server then handles http reqs from browser
+this entire jsx is conv into js by bable
+
+new components are created and then attached to the root or the tree
+comps created in src folder
+//not connected to root or the heirarchy
+//this must be imported in its parent comp         import <func ie comp name> from <path>
+even aft that for these comps to return it ie render data to the root comp
+we must call it --actually nest the comp as a jsx ele eg <comp1></comp1> syn <<name of the comp> />(self closing tag or whatever u want)
+this comp is reusuable 
+goto '../jsdata.js' and '../App.js' for live eg
+
+these components can receive data from their parent components also
+by function <name>(<props>){}        props is naming conv
+
+*/
+
+//React js 2        -------Props-State---Event-Handling---State-Change---Parent-Child-Interaction---------------------------------------------------------------------------------------------------------------------------------
+
+ 
+comp+comp: comp nesting
+
+//Event Handling 
+<button onClick={func}>
+ is enough for exec a func on a click of button
+
+when state changes directly the comp is not loaded w/ latest val
+this rerendering w/ state change is achieved using HOOKS
+Hooks are functions as they hook to the state of a component
+many Hooks are avail such as useState, useRef, useEffect...
+
+-All hooks are named exports: to use import them
+import { useState } from 'react';
+-Using useState Hook
+    first supply initial state to the Hook
+    this func(Hook) rets 2 vals currentState and function to change the current state
+    [currState, setFunc] = useState(ini)
+-ini state can be an obj{}, value o, array []..
+
+hooks are only used when ele are being changed rather than being simply accessed
+
+
+
+
+
+//React js 3        -------React-Bootstrap---Conditional-Rendering---Parent-Child-Interaction----Side-Effects----------------------------------------------------------------------------------------------------------------------------
+
+//npm -i react-icons
+import {/*whatever*/} from 'react-icons/ai//md...'
+
+// conditional rendering!!
+// no state change
+condition === 'yes' ? <h2 className="text-warning display-4 ">Thanks</h2> : <h2 className="text-danger display-4">HELLO</h2>
+
+//with state change ie wrt to button click...
+
+
+//React js 3        -------Side-Effects--Error Handling in HTTP Requests-------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+/*
+import Tier_2 from './components/comp2/level0';
+const mysql = require('mysql');
+const pool = mysql.createPool({
+  connectionLimit : 100, //important
+  host     : 'localhost',
+  user     : 'root',
+  password : '1234!@#$AaAa',
+  database : 'proj',
+  debug    :  false
+});
+
+function hey(){
+  let x="select * from welcome"
+  let q=mysql.x;
+  pool.q(q,(err, response) => {
+    if(err) {
+        console.error(err);
+        return;
+    }
+    console.log(response.affectedRows);
+});
+
+}
+*/
